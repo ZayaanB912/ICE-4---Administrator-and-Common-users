@@ -1,7 +1,7 @@
 # ICE-4---Administrator-and-Common-users
 # 🔒 Data Centre Security System
 
-A Java Swing desktop application simulating a smart security system for a data centre. Built as part of an ICE (In-Class Exercise) assignment covering core Java concepts including control structures, ArrayLists, switch statements, and Java Date/Time.
+A smart security system for a data centre. The system controls user access, manages users, and tracks login activity.
 
 ---
 
