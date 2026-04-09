@@ -147,22 +147,22 @@ So `index 1` always refers to "alice" across every list.
 
 ## File Breakdown
 
-### `DataStore.java`
+### `Datastorage.java`
 The central data store. All fields are `static` so every class shares the same instance. Contains the pre-populated user list and helper methods `addUser()`, `findUser()`, and `roleName()`.
 
-### `Main.java`
+### `IceTask4.java`
 The entry point. Launches `LoginFrame` safely on the Swing Event Dispatch Thread (EDT) using `SwingUtilities.invokeLater()`.
 
-### `LoginFrame.java`
+### `Loginframe.java`
 The first screen. Handles username/PIN input, tracks failed attempts per user, locks accounts after 3 failures, and starts a `java.util.Timer` for the 3-minute cooldown. On success, opens `MenuFrame` and closes itself.
 
-### `MenuFrame.java`
+### `Menuframe.java`
 Shown after login. Uses a `switch(role)` statement to build a different button layout depending on whether the user is Admin, Staff, or Visitor. Admin gets access to Create User and View Users screens.
 
-### `CreateUserFrame.java`
+### `Createuserframe.java`
 Admin-only. Validates input with logical operators, checks for duplicate usernames, then calls `DataStore.addUser()` which appends to all 6 parallel ArrayLists simultaneously and records a `LocalDateTime` timestamp.
 
-### `ViewUsersFrame.java`
+### `Viewusersframe.java`
 Admin-only. Iterates all parallel ArrayLists with a single `for` loop index and displays every user in a styled `JTable`. Includes a refresh button to reload the data.
 
 ---
